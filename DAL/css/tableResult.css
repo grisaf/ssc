@@ -1,0 +1,9 @@
+.title {
+    font-weight: bold;
+    font-size: 1em;
+}
+
+table.datatable thead th {
+    background: #000066;
+    color: #FFFFFF;
+}

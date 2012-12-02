@@ -1,0 +1,72 @@
+#blocker {
+   	background-color: gray;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	height:100%;
+	width:100%;
+	z-index: 100;
+	opacity: 0.5;
+	filter: alpha(opacity = 50);
+}
+
+#dialogPanel {
+    position: absolute;
+	z-index: 1000;
+	top: 0px;
+	left: 0px;
+	text-align:center;
+	vertical-align: middle;
+	height:100%;
+	width:100%;
+    z-index: 150;
+}
+
+.actionPanel {
+    border: 1px solid #696;
+	padding: 10px;
+	text-align: center;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+	-webkit-box-shadow: #666 2px 2px 3px;
+	-moz-box-shadow: #666 2px 2px 3px;
+	box-shadow: #666 2px 2px 3px;
+	background-color:#FFFFFF;
+	font-family:Verdana, Geneva, sans-serif;
+	z-index:1000;
+	margin: 15% 40%;
+}
+
+.infoPanel {
+	background-color:#FFFFFF;
+	z-index:1000;
+	margin: 10% 20%;
+}
+
+div.dialogContent table {
+    width: 100%;
+}
+
+#tipoEditar {
+    width: 100%;
+}
+
+#tipoAdicionar {
+    width: 100%;
+}
+
+.editPanel table {
+    border:0;
+}
+
+.dialogTitle {
+    font-weight: bold;
+    text-align: left;
+    padding-bottom:15px;
+}
+
+.dialogOption {
+    margin-top:15px;
+    text-align:right;
+}

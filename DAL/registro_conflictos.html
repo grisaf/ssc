@@ -1,0 +1,151 @@
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="css/style.css" >
+        <link rel="stylesheet" type="text/css" href="css/dialog.css" >
+        <link rel="stylesheet" type="text/css" href="css/dropkick.css" >
+
+        <script type='text/javascript' src="plugin/jquery.js"></script>
+        <script type='text/javascript' src="plugin/jquery.dropkick-1.0.0.js"></script>
+		<script type='text/javascript' src="javascript/registro_conflictos.js"></script>
+	</head>
+	<body>
+        <div id="container">
+            <div class="title">
+                Registrar conflicto
+            </div>
+            <br/>
+            <div id="content">
+                <table class="boxTable">
+                    <tr>
+                        <td class="formSectionTitle" colspan="2">Involucrados</td>
+                    </tr>
+                    <tr>
+                        <th class="titleClass">
+                            Sector A
+                        </th>
+                        <td class="contentClass">
+                            <select id="sectorA" tabindex="1" class="dk">
+                                <option value="">Choose a reaction</option>
+                                <option value="amazed">Amazed</option>
+                                <option value="bored">Bored</option>
+                                <option value="surprised">Surprised</option>
+                            </select>
+
+                            <!-- <input type="text" id="sectorA" maxlength="100" /> -->
+                        </td>
+                    </tr>
+                    <tr>
+                        <th class="titleClass">
+                            Actor A
+                        </th>
+                        <td class="contentClass">
+                            <input type="text" id="actorA" maxlength="100" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <th class="titleClass">
+                            Sector B
+                        </th>
+                        <td class="contentClass">
+                            <input type="text" id="sectorB" maxlength="100" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <th class="titleClass">
+                            Actor B
+                        </th>
+                        <td class="contentClass">
+                            <input type="text" id="actorB" maxlength="100" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="formSectionTitle" colspan="2">Ubicacion</td>
+                    </tr>
+                    <tr>
+                        <th class="titleClass">
+                            departamento
+                        </th>
+                        <td class="contentClass">
+                            <input type="text" id="Departamento" maxlength="100" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <th class="titleClass">
+                            Provincia
+                        </th>
+                        <td class="contentClass">
+                            <input type="text" id="Provincia" maxlength="100" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <th class="titleClass">
+                            Localidad
+                        </th>
+                        <td class="contentClass">
+                            <input type="text" id="Localidad" maxlength="100" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="Detalles" colspan="2">Detalles del Conflicto</td>
+                    </tr>
+                    <tr>
+                        <th class="titleClass">
+                            Asunto
+                        </th>
+                        <td class="contentClass">
+                            <input type="text" id="asunto" maxlength="100" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <th class="titleClass">
+                            Resumen
+                        </th>
+                        <td class="contentClass">
+                            <input type="text" id="resumen" maxlength="100" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <th class="titleClass">
+                            Tipo
+                        </th>
+                        <td class="contentClass">
+                            <input type="text" id="tipo" maxlength="100" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <th class="titleClass">
+                            Ambito
+                        </th>
+                        <td class="contentClass">
+                            <input type="text" id="ambito" maxlength="100" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <th class="titleClass">
+                            Fecha
+                        </th>
+                        <td class="contentClass">
+                            <input type="text" id="fecha" maxlength="100" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <th class="titleClass">
+                            Medida de Presion
+                        </th>
+                        <td class="contentClass">
+                            <input type="text" id="presion" maxlength="100" />
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div>
+                 <button type="button" onclick="editData();">Aceptar</button>
+                 <button type="button" onclick="cancelActionPanel();">Cancelar</button>
+            </div>
+        </div>
+
+        <div id="blocker" style="display:none;">
+            &#160;
+        </div>
+	</body>
+</html>
