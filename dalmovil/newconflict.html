@@ -1,0 +1,139 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>Conflictos</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <link rel="stylesheet" href="css/jquery.mobile-1.0rc1.min.css" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/jquery.stepy.css" />
+</head>
+
+<body>
+
+<div id="newstep1" data-role="page" >
+
+    <div data-role="header" data-position="fixed">
+        <h1>Primera Pantalla</h1>
+    </div>
+
+    <div data-role="content">
+        <form action="http://192.168.70.102/services/?q=postConflicto" id="default" class="ui-body ui-body-a ui-corner-all" method="get">
+            <fieldset title="Paso 1">
+                <legend>Tipo de Conflicto:</legend>
+                <div data-role="fieldcontain">
+                    <label for="conflicttype" class="select"></label>
+                    <select name="conflicttype" id="conflicttype">
+                    </select>
+                </div>
+            </fieldset>
+
+            <fieldset title="Paso 2">
+                <legend>Actores:</legend>
+                <div data-role="fieldcontain" id="actoressectores">
+                    <label for="actora">Actor A:</label>
+                    <input type="text" name="actora" id="actora" value=""  />
+                    <label for="sectora">Sector A:</label>
+                    <input type="text" name="actora" id="sectora" value=""  />
+                    <br/>
+                    <label for="actorb">Actor B:</label>
+                    <input type="text" name="actorb" id="actorb" value=""  />
+                    <label for="sectorb">Sector B:</label>
+                    <input type="text" name="sectorb" id="sectorb" value=""  />
+                </div>
+            </fieldset>
+            <fieldset title="Paso 3">
+                <legend>Ubicacion</legend>
+                <div id="locationradio">
+                    <div data-role="fieldcontain">
+                        <label for="posicion">Usar Mi Posicion:</label>
+                        <select name="posicion" id="posicion" data-role="slider">
+                            <option value="on">Usar Mi Posicion</option>
+                            <option value="off">Seleccione ubicacion </option>
+                        </select>
+                    </div>
+                </div>
+                <div data-role="fieldcontain">
+                    <label for="localidad" class="select">Localidad:</label>
+                    <select name="localidad" id="localidad">
+                        <option></option>
+                        <option>La Paz</option>
+                        <option>Santa Cruz</option>
+                        <option>Cochabamba</option>
+                    </select>
+                </div>
+                <div data-role="fieldcontain">
+                    <label for="provincia" class="select">Provincia:</label>
+                    <select name="provincia" id="provincia">
+                    </select>
+                </div>
+                <div data-role="fieldcontain">
+                    <label for="departamento" class="select">Departamento:</label>
+                    <select name="departamento" id="departamento">
+                    </select>
+                </div>
+            </fieldset>
+            <button type="submit" data-theme="b" name="submit" value="submit-value" class="ui-btn-hidden" data-disabled="false">Enviar</button>
+        </form>
+    </div>
+    <div data-role="footer" data-position="fixed">
+        <a href="#" data-role="button" data-icon="arrow-l" ONCLICK="history.go(-1)">Atras</a>
+        <a href="index.html" data-role="button" data-icon="search">Ver Conflictos</a>
+        <a href="viewstadistics.html" data-role="button" data-icon="grid">Ver Estadisticas</a>
+    </div>
+</div>
+
+<script src="js/jquery.js"></script>
+<script src="js/jquery.mobile-1.0rc1.min.js"></script>
+<script src="js/utils.js"></script>
+<script src="js/jquery.stepy.js"></script>
+<script src="js/jquery.stepy.min.js"></script>
+<script type="text/javascript">
+    $(function() {
+        $('#default').stepy({
+            backLabel:	'Atras',
+            nextLabel:	'Siguiente'
+        });
+
+        $('div#step').stepy({
+            finishButton: false
+        });
+
+        // Optionaly
+        $('#custom').validate({
+            errorPlacement: function(error, element) {
+                $('#custom div.stepy-error').append(error);
+            }, rules: {
+                'user':			{ maxlength: 1 },
+                'email':		'email',
+                'checked':		'required',
+                'newsletter':	'required',
+                'password':		'required',
+                'bio':			'required',
+                'day':			'required'
+            }, messages: {
+                'user':			{ maxlength: 'User field should be less than 1!' },
+                'email':		{ email: 	 'Invalid e-mail!' },
+                'checked':		{ required:  'Checked field is required!' },
+                'newsletter':	{ required:  'Newsletter field is required!' },
+                'password':		{ required:  'Password field is requerid!' },
+                'bio':			{ required:  'Bio field is required!' },
+                'day':			{ required:  'Day field is requerid!' }
+            }
+        });
+
+
+
+        $('#target').stepy({
+            description:	false,
+            legend:			false,
+            titleClick:		true,
+            titleTarget:	'#title-target'
+        });
+
+    });
+</script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Conflictos</title>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<link rel="stylesheet" href="css/jquery.mobile-1.0rc1.min.css" />
+<link rel="stylesheet" href="css/styles.css" />
+
+</head>
+    
+<body>
+
+<div id="conflictListPage" data-role="page" >
+
+	<div data-role="header" data-position="fixed">
+        <h1>Listado de Conflictos</h1>
+	</div>
+
+	<div data-role="content">
+         <ul id="conflictList" data-role="listview" data-filter="true"></ul>
+    </div>		
+    <div data-role="footer" data-position="fixed">
+            <a href="newconflict.html" data-role="button" data-icon="plus">Informar acerca de un conflicto</a>
+            <a href="viewstadistics.html" data-role="button" data-icon="grid">Ver Estadisticas</a>
+        </div>
+    </div>
+</div>
+
+<script src="js/jquery.js"></script>
+<script src="js/jquery.mobile-1.0rc1.min.js"></script>
+<script src="js/conflictlist.js"></script>
+<script src="js/conflictdetails.js"></script>
+<script src="js/reportlist.js"></script>
+<script src="js/utils.js"></script>
+
+</body>
+
+</html>

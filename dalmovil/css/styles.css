@@ -1,0 +1,18 @@
+#conflictPic {
+	float: left;
+	padding-right: 10px;
+	padding-bottom: 16px;
+}
+
+#conflictDetails p {
+	margin-top: 0px;
+	margin-bottom: 8px;
+}
+
+#actionList {
+	clear: both;
+}
+.logo img{
+    max-width: 100px;
+    float: left;
+}
